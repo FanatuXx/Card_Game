@@ -16,6 +16,8 @@ public class CardDisplay : MonoBehaviour
     public TMP_Text valueText;
     public Image[] typeImages;
 
+    public Image damageImage;
+
     private Color[] cardColors = 
     {
         new Color(0.70f, 0.20f, 0.13f), //Fire
@@ -43,6 +45,8 @@ public class CardDisplay : MonoBehaviour
     {
         //Update the main card image color based on the first card type
         cardImage.color = cardColors[(int)cardData.cardType[0]];
+
+        damageImage.color = typeColors[(int)cardData.damageType[0]];
 
         nameText.text = cardData.cardName;
         healthText.text = cardData.health.ToString();

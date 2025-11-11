@@ -1,0 +1,36 @@
+using NUnit.Framework;
+using UnityEngine;
+using TarotProject;
+using System.Collections.Generic;
+using System.Collections;
+
+public class DeckManager : MonoBehaviour
+{
+    public List<Card> allCards = new List<Card>();
+
+    private int currentIndex = 0;
+
+    void Start()
+    {
+        //Load all card assests from the Resources folder
+        Card[] cards = Resources.LoadAll<Card>("Cards");
+
+        //Add the loaded cards to the allCards list
+        allCards.AddRange(cards);
+
+        HandManager hand = FindFirstObjectByType<HandManager>();
+        for (int i = 0; i < 6; i++)
+        {
+            DrawCard(hand);
+        }
+    }
+    public void DrawCard(HandManager handManager)
+    {
+        if (allCards.Count == 0)
+        return;
+
+        Card nextCard = allCards[currentIndex];
+        handManager.AddCardToHand(nextCard);
+        currentIndex = (currentIndex + 1) % allCards.Count;
+    }
+}
