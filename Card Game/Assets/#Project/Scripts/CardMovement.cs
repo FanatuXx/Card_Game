@@ -1,12 +1,12 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
 {
     private RectTransform rectTransform;
     private Canvas canvas;
-    private Vector2 originalLocalPointerPosition;
-    private Vector3 originalPanelLocalPosition;
+    private RectTransform canvasRectTransform;
     private Vector3 originalScale;
     private int currentState = 0;
     private Quaternion originalRotation;
@@ -17,18 +17,46 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
     [SerializeField] private Vector3 playPosition;
     [SerializeField] private GameObject glowEffect;
     [SerializeField] private GameObject playArrow;
+    [SerializeField] private float lerpFactor = 0.1f;
+    [SerializeField] private float cardPlayDivider = 4f;
+    [SerializeField] private float cardPlayMultiplier = 1f;
+    [SerializeField] private bool needUpdateCardPlayPosition = false;
+    [SerializeField] private float playPositionYDivider = 2f;
+    [SerializeField] private float playPositionYMultiplier = 1f;
+    [SerializeField] private float playPositionXDivider = 4f;
+    [SerializeField] private float playPositionXMultiplier = 1f;
+    [SerializeField] private bool needUpdatePlayPosition = false;
 
     void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         canvas = GetComponentInParent<Canvas>();
+
+        if (canvas != null)
+        {
+            canvasRectTransform = canvas.GetComponent<RectTransform>();
+        }
+
         originalScale = rectTransform.localScale;
         originalPosition = rectTransform.localPosition;
         originalRotation = rectTransform.localRotation;
+
+        UpdateCardPlayPostion();
+        UpdatePlayPostion();
     }
 
-    void Update ()
+    void Update()
     {
+        if (needUpdateCardPlayPosition)
+        {
+            UpdateCardPlayPostion();
+        }
+
+        if (needUpdatePlayPosition)
+        {
+            UpdatePlayPostion();
+        }
+        
         switch (currentState)
         {
             case 1:
@@ -54,11 +82,11 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
     private void TransitionToState0()
     {
         currentState = 0;
-        rectTransform.localScale = originalScale; //Reset scale
-        rectTransform.localPosition = originalPosition; //Reset position
-        rectTransform.localRotation = originalRotation; //Reset rotation
+        rectTransform.localScale = originalScale; //Reset Scale
+        rectTransform.localRotation = originalRotation; //Reset Rotation
+        rectTransform.localPosition = originalPosition; //Reset Position
         glowEffect.SetActive(false); //Disable glow effect
-        playArrow.SetActive(false); //Disable play arrow
+        playArrow.SetActive(false); //Disable playArrow
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -69,7 +97,7 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
             originalRotation = rectTransform.localRotation;
             originalScale = rectTransform.localScale;
 
-            currentState = 1; //Transition to hover state
+            currentState = 1;
         }
     }
 
@@ -86,8 +114,6 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
         if (currentState == 1)
         {
             currentState = 2;
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.GetComponent<RectTransform>(), eventData.position, eventData.pressEventCamera, out originalLocalPointerPosition);
-            originalPanelLocalPosition = rectTransform.localPosition;
         }
     }
 
@@ -95,44 +121,59 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
     {
         if (currentState == 2)
         {
-            Vector2 localPointerPosition;
-            if (RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.GetComponent<RectTransform>(), eventData.position, eventData.pressEventCamera, out localPointerPosition))
+            if (Input.mousePosition.y > cardPlay.y)
             {
-                rectTransform.position = Input.mousePosition;
-
-                if (rectTransform.localPosition.y > cardPlay.y)
-                {
-                    currentState = 3;
-                    playArrow.SetActive(true);
-                    rectTransform.localPosition = playPosition;
-                }
+                currentState = 3;
+                playArrow.SetActive(true);
+                rectTransform.localPosition = Vector3.Lerp(rectTransform.position, playPosition, lerpFactor);
             }
         }
     }
 
     private void HandleHoverState()
     {
-        glowEffect.SetActive(true); //Enable glow effect
-        rectTransform.localScale = originalScale * selectScale; //Scale up the card 
+        glowEffect.SetActive(true);
+        rectTransform.localScale = originalScale * selectScale;
     }
 
     private void HandleDragState()
     {
         //Set the card's rotation to zero
         rectTransform.localRotation = Quaternion.identity;
+        rectTransform.position = Vector3.Lerp(rectTransform.position, Input.mousePosition, lerpFactor);
     }
 
     private void HandlePlayState()
     {
         rectTransform.localPosition = playPosition;
         rectTransform.localRotation = Quaternion.identity;
-        
+
         if (Input.mousePosition.y < cardPlay.y)
         {
             currentState = 2;
             playArrow.SetActive(false);
         }
     }
+
+    private void UpdateCardPlayPostion()
+    {
+        if (cardPlayDivider != 0 && canvasRectTransform != null)
+        {
+            float segment = cardPlayMultiplier / cardPlayDivider;
+
+            cardPlay.y = canvasRectTransform.rect.height * segment;
+        }
+    }
+
+    private void UpdatePlayPostion()
+    {
+        if (canvasRectTransform != null && playPositionYDivider != 0 && playPositionXDivider != 0)
+        {
+            float segmentX = playPositionXMultiplier / playPositionXDivider;
+            float segmentY = playPositionYMultiplier / playPositionYDivider;
+
+            playPosition.x = canvasRectTransform.rect.width * segmentX;
+            playPosition.y = canvasRectTransform.rect.height * segmentY;
+        }
+    }
 }
-
-
