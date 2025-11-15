@@ -3,17 +3,17 @@ using UnityEngine;
 
 public class ArcRenderer : MonoBehaviour
 {
-    public GameObject arrowPrefab;
-    public GameObject dotPrefab;
-    public int poolSize = 50;
-    private List<GameObject> dotPool = new List<GameObject>();
-    private GameObject arrowInstance;
+    public GameObject arrowPrefab; //The arrow head
+    public GameObject dotPrefab; //The dots
+    public int poolSize = 50; //The size of our dot pool
+    private List<GameObject> dotPool = new List<GameObject>(); //The dot pool
+    private GameObject arrowInstance; //Holds a reference to the arrow head
 
-    public float spacing = 50;
-    public float arrowAngleAdjustment = 0;
-    public int dotsToSkip = 1;
-    private Vector3 arrowDirection;
-    public float baseScreenWidth = 1920f;
+    public float spacing = 50; //The spacing between each dot
+    public float arrowAngleAdjustment = 0; //Angle correction for the arrow head
+    public int dotsToSkip = 1; //Number of dots to skip before the arrow head
+    private Vector3 arrowDirection; //Holds the position of the Arrow head  need to point from
+    public float baseScreenWidth = 3440f;
     [SerializeField] private float spacingScale;
 
     void Start()
