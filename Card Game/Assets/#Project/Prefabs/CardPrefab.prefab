@@ -1688,13 +1688,13 @@ MonoBehaviour:
   glowEffect: {fileID: 6613514421824799761}
   playArrow: {fileID: 6654633717996871762}
   lerpFactor: 0.1
-  cardPlayDivider: 0
+  cardPlayDivider: 2.5
   cardPlayMultiplier: 1
-  needUpdateCardPlayPosition: 0
-  playPositionYDivider: 2
+  needUpdateCardPlayPosition: 1
+  playPositionYDivider: 1
   playPositionYMultiplier: 1
-  playPositionXDivider: -3
-  playPositionXMultiplier: 1.2
+  playPositionXDivider: 2
+  playPositionXMultiplier: 1
   needUpdatePlayPosition: 0
 --- !u!1 &8083853145251426015
 GameObject:

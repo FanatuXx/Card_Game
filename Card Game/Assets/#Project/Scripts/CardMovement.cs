@@ -23,7 +23,7 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
     [SerializeField] private bool needUpdateCardPlayPosition = false;
     [SerializeField] private float playPositionYDivider = 2f;
     [SerializeField] private float playPositionYMultiplier = 1f;
-    [SerializeField] private float playPositionXDivider = 4f;
+    [SerializeField] private float playPositionXDivider = 2f;
     [SerializeField] private float playPositionXMultiplier = 1f;
     [SerializeField] private bool needUpdatePlayPosition = false;
 
@@ -169,8 +169,8 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
     {
         if (canvasRectTransform != null && playPositionYDivider != 0 && playPositionXDivider != 0)
         {
-            float segmentX = playPositionXMultiplier / playPositionXDivider;
-            float segmentY = playPositionYMultiplier / playPositionYDivider;
+            float segmentX = (playPositionXMultiplier / playPositionXDivider) - 0.5f;
+            float segmentY = (playPositionYMultiplier / playPositionYDivider) - 0.5f;
 
             playPosition.x = canvasRectTransform.rect.width * segmentX;
             playPosition.y = canvasRectTransform.rect.height * segmentY;
