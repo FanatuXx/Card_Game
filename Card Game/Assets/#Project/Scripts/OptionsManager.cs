@@ -1,16 +1,21 @@
+using System.Threading;
 using UnityEngine;
 
 public class OptionsManager: MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    private bool isMuted = false;
+
     void Start()
     {
-        
+        AudioManager audioManager = GetComponentInParent<GameManager>().AudioManager;
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
 }
+
+//bool pour muter l'audio
+//reference dans le start pour trouver l'audio manager

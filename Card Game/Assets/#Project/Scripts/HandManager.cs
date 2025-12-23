@@ -6,7 +6,6 @@ using System;
 
 public class HandManager : MonoBehaviour
 {
-    public DeckManager deckManager;
     public GameObject cardPrefab; //Assign card prefab in inspector
     public Transform handTransform; //Root of the hand position
     public float fanSpread = 7.5f;
@@ -28,9 +27,11 @@ public class HandManager : MonoBehaviour
         GameObject newCard = Instantiate(cardPrefab, handTransform.position, Quaternion.identity, handTransform);
         cardsInHand.Add(newCard);
 
-        //Set the CardData of the instantiated card
-        newCard.GetComponent<CardDisplay>().cardData = cardData;
-
+        CardDisplay cardDisplay = newCard.GetComponent<CardDisplay>();
+        if (cardDisplay != null)
+        {
+            cardDisplay.SetCardData(cardData);
+        }
 
         UpdateHandVisuals();
     }
