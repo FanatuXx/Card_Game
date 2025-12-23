@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eba8ded5d3fb7fb4395c9bc128127df8, type: 3}
+  m_Name: Clubs4
+  m_EditorClassIdentifier: Assembly-CSharp::TarotProject.Card
+  cardName: 4 of Clubs
+  cardType: 00000000
+  cardValue: 4
+  cardSprite: {fileID: 5416215687252324984, guid: edbf4fd75dc197b4aa7fb06b4440ad4e, type: 3}
