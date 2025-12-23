@@ -13,10 +13,9 @@ public class CardDisplay : MonoBehaviour
     {
         cardData = data;
 
-        if (cardData != null && cardImage != null)
+        if (cardData != null && cardImage != null && cardData.cardSprite != null)
         {
             cardImage.sprite = cardData.cardSprite;
-            cardImage.gameObject.SetActive(true);
         }
     }
 }

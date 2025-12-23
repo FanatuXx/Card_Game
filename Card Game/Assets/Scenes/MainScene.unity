@@ -523,10 +523,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HandManager
   cardPrefab: {fileID: 7854932300404087528, guid: 6177a51ad06d40148b3df9d14c92ea7f, type: 3}
   handTransform: {fileID: 1850368067}
-  fanSpread: 7.5
-  cardSpacing: -150
-  verticalSpacing: 75
-  maxHandSize: 12
+  fanSpread: -7.5
+  cardSpacing: 100
+  verticalSpacing: 200
+  maxHandSize: 13
+  startingHandSize: 13
   cardsInHand: []
 --- !u!1001 &6392123328403976287
 PrefabInstance:
