@@ -10,6 +10,7 @@ namespace TarotProject
         public List<CardType> cardType;
         public int cardValue;
         public Sprite cardSprite;
+        public Sprite cardBack;
 
 
         public enum CardType

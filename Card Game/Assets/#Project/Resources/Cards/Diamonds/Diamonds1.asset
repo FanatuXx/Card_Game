@@ -16,3 +16,4 @@ MonoBehaviour:
   cardType: 03000000
   cardValue: 14
   cardSprite: {fileID: 9213952401200370327, guid: 6f827d462a10121408d9f91e8fe9688a, type: 3}
+  cardBack: {fileID: -1438021533542915631, guid: 758b7f0bbdb36d549adb9504ab0e2205, type: 3}
