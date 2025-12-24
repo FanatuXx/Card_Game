@@ -1,21 +1,22 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TarotProject;
-using System;
 
 public class HandManager : MonoBehaviour
 {
     public GameObject cardPrefab; //Assign card prefab in inspector
     public Transform handTransform; //Root of the hand position
-    public float fanSpread = 7.5f;
 
+    // Visual layout settings for the card fan
+    public float fanSpread = 7.5f;
     public float cardSpacing = -150f;
     public float verticalSpacing = 75f;
-    public int maxHandSize = 13;
-    public int startingHandSize = 13;
-    public List<GameObject> cardsInHand = new List<GameObject>(); //Hold a list of the card objects in our hand
 
+    public int maxHandSize = 13;
+
+    public List<GameObject> cardsInHand = new List<GameObject>(); //Hold a list of the card objects in players' hand
+
+    /*
     private List<Card> allCards;
 
     void Start()
@@ -56,29 +57,30 @@ public class HandManager : MonoBehaviour
         Card randomCard = allCards[UnityEngine.Random.Range(0, allCards.Count)];
         AddCardToHand(randomCard);
     }
+    */
 
+    // Adds a card to this player's hand and updates visual layout
     public void AddCardToHand(Card cardData)
     {
-        GameObject newCard = Instantiate(cardPrefab, handTransform.position, Quaternion.identity, handTransform);
-        cardsInHand.Add(newCard);
+        GameObject newCard = Instantiate(cardPrefab, handTransform.position, Quaternion.identity, handTransform); // Create new card GameObject from prefab
+        cardsInHand.Add(newCard); // Add the new card to our list
 
+        // Get the CardDisplay component to set card data
         CardDisplay cardDisplay = newCard.GetComponent<CardDisplay>();
         if (cardDisplay != null)
         {
-            cardDisplay.SetCardData(cardData);
+            cardDisplay.SetCardData(cardData); // Apply the card data to display
         }
 
         UpdateHandVisuals();
     }
 
-    void Update()
-    {
-    }
-
     private void UpdateHandVisuals()
     {
+        // Get total number of cards in hand
         int cardCount = cardsInHand.Count;
 
+        // Special case: single card centered with no rotation
         if (cardCount == 1)
         {
             cardsInHand[0].transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
@@ -86,70 +88,75 @@ public class HandManager : MonoBehaviour
             return;
         }
 
+        // Position each card in a fan pattern
         for (int i = 0; i < cardCount; i++)
         {
-            float rotationAngle = (fanSpread * (i - (cardCount - 1) / 2f));
+            // Calculate rotation angle for fan spread
+            float rotationAngle = fanSpread * (i - (cardCount - 1) / 2f);
             cardsInHand[i].transform.localRotation = Quaternion.Euler(0f, 0f, rotationAngle);
 
-            float horizontalOffset = (cardSpacing * (i - (cardCount - 1) / 2f));
+            // Calculate horizontal spacing
+            float horizontalOffset = cardSpacing * (i - (cardCount - 1) / 2f);
 
+            // Calculate vertical offset for arc effect
             float normalizedPosition = (2f * i / (cardCount - 1) - 1f);
             float verticalOffset = verticalSpacing * (1 - normalizedPosition * normalizedPosition);
 
+            // Apply final position
             cardsInHand[i].transform.localPosition = new Vector3(horizontalOffset, verticalOffset, 0f);
         }
     }
 }
 
-   /* void Start()
-    {
+/* void Start()
+ {
 
-    }
+ }
 
-    public void AddCardToHand(Card cardData)
-    {
+ public void AddCardToHand(Card cardData)
+ {
 
-        //Instantiate the card
-        GameObject newCard = Instantiate(cardPrefab, handTransform.position, Quaternion.identity, handTransform);
-        cardsInHand.Add(newCard);
+     //Instantiate the card
+     GameObject newCard = Instantiate(cardPrefab, handTransform.position, Quaternion.identity, handTransform);
+     cardsInHand.Add(newCard);
 
-        CardDisplay cardDisplay = newCard.GetComponent<CardDisplay>();
-        if (cardDisplay != null)
-        {
-            cardDisplay.SetCardData(cardData);
-        }
+     CardDisplay cardDisplay = newCard.GetComponent<CardDisplay>();
+     if (cardDisplay != null)
+     {
+         cardDisplay.SetCardData(cardData);
+     }
 
-        UpdateHandVisuals();
-    }
+     UpdateHandVisuals();
+ }
 
-    void Update()
-    {
-        //UpdateHandVisuals();
-    }
+ void Update()
+ {
+     //UpdateHandVisuals();
+ }
 
-    private void UpdateHandVisuals()
-    {
-        int cardCount = cardsInHand.Count;
+ private void UpdateHandVisuals()
+ {
+     int cardCount = cardsInHand.Count;
 
-        if (cardCount == 1)
-        {
-            cardsInHand[0].transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
-            cardsInHand[0].transform.localPosition = new Vector3(0f, 0f, 0f);
-            return;
-        }
+     if (cardCount == 1)
+     {
+         cardsInHand[0].transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+         cardsInHand[0].transform.localPosition = new Vector3(0f, 0f, 0f);
+         return;
+     }
 
-        for (int i = 0; i < cardCount; i++)
-        {
-            float rotationAngle = (fanSpread * (i - (cardCount - 1) / 2f));
-            cardsInHand[i].transform.localRotation = Quaternion.Euler(0f, 0f, rotationAngle);
+     for (int i = 0; i < cardCount; i++)
+     {
+         float rotationAngle = (fanSpread * (i - (cardCount - 1) / 2f));
+         cardsInHand[i].transform.localRotation = Quaternion.Euler(0f, 0f, rotationAngle);
 
-            float horizontalOffset = (cardSpacing * (i - (cardCount - 1) / 2f));
+         float horizontalOffset = (cardSpacing * (i - (cardCount - 1) / 2f));
 
-            float normalizedPosition = (2f * i / (cardCount - 1) - 1f); //Normalize card position between -1, 1
-            float verticalOffset = verticalSpacing * (1 - normalizedPosition * normalizedPosition);
+         float normalizedPosition = (2f * i / (cardCount - 1) - 1f); //Normalize card position between -1, 1
+         float verticalOffset = verticalSpacing * (1 - normalizedPosition * normalizedPosition);
 
-            //Set card position
-            cardsInHand[i].transform.localPosition = new Vector3(horizontalOffset, verticalOffset, 0f);
-        }
-    } 
+         //Set card position
+         cardsInHand[i].transform.localPosition = new Vector3(horizontalOffset, verticalOffset, 0f);
+     }
+ } 
 }*/
