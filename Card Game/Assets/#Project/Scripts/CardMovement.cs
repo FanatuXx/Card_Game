@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Unity.VisualScripting;
 using UnityEngine.UI;
 
 public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
@@ -81,12 +82,28 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
 
     private void TransitionToState0()
     {
+        bool wasPlaying = (currentState == 3);
+
         currentState = 0;
         rectTransform.localScale = originalScale; //Reset Scale
         rectTransform.localRotation = originalRotation; //Reset Rotation
         rectTransform.localPosition = originalPosition; //Reset Position
         glowEffect.SetActive(false); //Disable glow effect
         playArrow.SetActive(false); //Disable playArrow
+
+        if (wasPlaying)
+        {
+            OnCardPlayed();
+        }
+    }
+
+    private void OnCardPlayed()
+    {
+        GameObject turnManager = GameObject.Find("TurnManager");
+        if (turnManager != null)
+        {
+            CustomEvent.Trigger(turnManager, "NextTurn");
+        }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
