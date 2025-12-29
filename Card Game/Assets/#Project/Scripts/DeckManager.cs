@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class DeckManager : MonoBehaviour
 {
-    
     private const int CARDS_PER_PLAYER = 13; // Number of cards each player receives at game start
     private List<Card> deck = new List<Card>(); // All available cards in the deck
     private List<HandManager> playerHandManagers = new List<HandManager>(); // References to all player hand managers in the game
 
+    public Card.CardType currentTrumpColor;
+    public GameObject trumpCardObject;
+    public GameObject deckPileObject;
+    public GameObject cardPrefab;
+    public Sprite deckBackSprite;
+    public Transform trumpCardPosition;
     void Start()
     {
         // Initialize the deck with all available cards
@@ -22,6 +27,9 @@ public class DeckManager : MonoBehaviour
 
         // Deal cards to all players
         DealCardsToAllPlayers();
+
+        // Set the trump card (next card in deck) for the round
+        SetTrumpCard();
     }
 
     // Loads all card assets from Resources folder into the deck
@@ -126,30 +134,72 @@ public class DeckManager : MonoBehaviour
         Debug.Log($"Dealt {CARDS_PER_PLAYER} cards to {playerHandManagers.Count} players");
     }
 
-    // Draws a single card from the deck and gives it to specified player
-    public void DrawCard(HandManager handManager)
+    private void SetTrumpCard()
     {
-        // Check if deck is empty
+        // Check if there are cards left in the deck
         if (deck.Count == 0)
         {
-            Debug.LogWarning("No cards left in deck to draw!");
+            Debug.LogWarning("No cards left in deck to set trump card!");
             return;
         }
-
-        // Check if player hand is full
-        if (handManager.cardsInHand.Count >= handManager.maxHandSize)
-        {
-            Debug.LogWarning("Hand is full, cannot draw more cards!");
-            return;
-        }
-
-        // Get the top card from the deck
-        Card topCard = deck[0];
-
-        // Remove the card from the deck
+        // The next card in the deck is the trump card
+        Card trumpCard = deck[0];
         deck.RemoveAt(0);
 
-        // Add the card to player's hand
-        handManager.AddCardToHand(topCard);
+        currentTrumpColor = trumpCard.cardType[0];
+
+        InstantiateTrumpCardVisual(trumpCard);
+        InstantiateDeckPileVisual();
+
+        // Log the trump card information
+        Debug.Log($"Trump color set to: {currentTrumpColor}");
+    }
+
+    private void InstantiateTrumpCardVisual(Card trumpCard)
+    {
+        if (cardPrefab == null || trumpCardPosition == null)
+        {
+            Debug.LogWarning("Card prefab or trump card position not assigned!");
+            return;
+        }
+
+        trumpCardObject = Instantiate(cardPrefab, trumpCardPosition.position, Quaternion.identity, trumpCardPosition);
+
+        CardDisplay cardDisplay = trumpCardObject.GetComponent<CardDisplay>();
+        if (cardDisplay != null)
+        {
+            cardDisplay.SetCardData(trumpCard, true);
+        }
+
+        CardMovement cardMovement = trumpCardObject.GetComponent<CardMovement>();
+        if (cardMovement != null)
+        {
+            Destroy(cardMovement);
+        }
+    }
+
+    private void InstantiateDeckPileVisual()
+    {
+        if (cardPrefab == null || trumpCardPosition == null || deckBackSprite == null)
+        {
+            Debug.LogWarning("Required references not assigned for deck pile!");
+            return;
+        }
+
+        Vector3 deckPosition = trumpCardPosition.position + new Vector3(-150f, 0f, 0f);
+
+        deckPileObject = Instantiate(cardPrefab, deckPosition, Quaternion.identity, trumpCardPosition.parent);
+
+        CardDisplay deckDisplay = deckPileObject.GetComponent<CardDisplay>();
+        if (deckDisplay != null && deckDisplay.cardImage != null)
+        {
+            deckDisplay.cardImage.sprite = deckBackSprite;
+        }
+
+        CardMovement cardMovement = deckPileObject.GetComponent<CardMovement>();
+        if (cardMovement != null)
+        {
+            Destroy(cardMovement);
+        }
     }
 }
