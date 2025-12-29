@@ -31,11 +31,17 @@ public class HandManager : MonoBehaviour
         {
             cardDisplay.SetCardData(cardData, isHumanPlayer); // Apply the card data to display
         }
+        
+        CardMovement cardMovement = newCard.GetComponent<CardMovement>();
+        if (cardMovement != null)
+        {
+            cardMovement.ownerHandManager = this;
+        }
 
         UpdateHandVisuals();
     }
 
-    private void UpdateHandVisuals()
+    public void UpdateHandVisuals()
     {
         // Get total number of cards in hand
         int cardCount = cardsInHand.Count;
