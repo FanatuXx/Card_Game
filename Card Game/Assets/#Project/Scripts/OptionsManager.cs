@@ -4,8 +4,6 @@ using UnityEngine;
 public class OptionsManager: MonoBehaviour
 {
 
-    private bool isMuted = false;
-
     void Start()
     {
         AudioManager audioManager = GetComponentInParent<GameManager>().AudioManager;

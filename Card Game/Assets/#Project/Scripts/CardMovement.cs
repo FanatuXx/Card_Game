@@ -99,6 +99,14 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
 
     private void OnCardPlayed()
     {
+        HandManager handManager = GetComponentInParent<HandManager>();
+        Transform handPosition = handManager != null ? handManager.handTransform : null;
+
+        if (handManager != null && handPosition != null)
+        {
+            CustomEvent.Trigger(gameObject, "OnCardPlayed", handManager, handPosition);
+        }
+
         GameObject turnManager = GameObject.Find("TurnManager");
         if (turnManager != null)
         {
