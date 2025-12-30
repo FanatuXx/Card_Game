@@ -1251,6 +1251,7 @@ MonoBehaviour:
   playPositionXDivider: 2
   playPositionXMultiplier: 1
   needUpdatePlayPosition: 0
+  ownerHandManager: {fileID: 0}
 --- !u!114 &-2270030913489305228
 MonoBehaviour:
   m_ObjectHideFlags: 0
