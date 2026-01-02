@@ -297,6 +297,13 @@
       },
       "url": "https://packages.unity.com"
     },
+    "dev.bolt.addons": {
+      "version": "https://github.com/RealityStop/Bolt.Addons.Community.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "f1ba917d5e03effbde4d25bbf06954b2c69f14dc"
+    },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
       "depth": 0,

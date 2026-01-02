@@ -29,4 +29,12 @@ public class CardDisplay : MonoBehaviour
             }
         }
     }
+
+    public void RevealCard()
+    {
+        if (cardData != null && cardImage != null && cardData.cardSprite != null)
+        {
+            cardImage.sprite = cardData.cardSprite;
+        }
+    }
 }
