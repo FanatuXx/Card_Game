@@ -108,11 +108,6 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
 
         Debug.Log($"HandManager: {handManager}, HandPosition: {handPosition}");
 
-        // NEW DEBUG LINE - Check if Script Machine exists
-        var scriptMachine = GetComponent<Unity.VisualScripting.ScriptMachine>();
-        Debug.Log($"Script Machine on card: {scriptMachine} | Enabled: {(scriptMachine != null ? scriptMachine.enabled : false)} | Graph: {(scriptMachine != null ? scriptMachine.graph : null)}");
-
-
         if (handManager != null && handPosition != null)
         {
             Debug.Log("Triggering CustomEvent OnCardPlayed");
