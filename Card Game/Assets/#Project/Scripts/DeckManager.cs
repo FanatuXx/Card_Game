@@ -132,6 +132,11 @@ public class DeckManager : MonoBehaviour
         }
 
         Debug.Log($"Dealt {CARDS_PER_PLAYER} cards to {playerHandManagers.Count} players");
+
+        for (int i = 0; i < deckIndex; i++)
+        {
+            deck.RemoveAt(0);
+        }
     }
 
     private void SetTrumpCard()
