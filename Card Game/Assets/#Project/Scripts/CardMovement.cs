@@ -1,6 +1,9 @@
+using NUnit.Framework;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
@@ -117,6 +120,22 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
         {
             Debug.LogError("HandManager or HandPosition is NULL!");
         }
+
+        GameObject turnManager = GameObject.Find("TurnManager");
+        if (turnManager != null)
+        { 
+            List<GameObject> cards = Variables.Scene(SceneManager.GetSceneByBuildIndex(0)).Get<List<GameObject>>("playedCardsThisRound");
+
+            if(cards.Count == 3)
+            {
+                CustomEvent.Trigger(turnManager, "PlayerNextTrick");
+            }
+            else
+            {
+                CustomEvent.Trigger(turnManager, "NextTurn");
+            }
+        }
+
     }
 
     public void OnPointerEnter(PointerEventData eventData)
