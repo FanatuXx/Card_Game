@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 namespace TarotProject
 {
@@ -11,6 +12,7 @@ namespace TarotProject
         public int cardValue;
         public Sprite cardSprite;
         public Sprite cardBack;
+        public int initialValue;
 
 
         public enum CardType
@@ -20,5 +22,6 @@ namespace TarotProject
             Hearts,
             Diamonds,
         }
+
     }
 }

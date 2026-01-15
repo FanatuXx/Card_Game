@@ -17,3 +17,4 @@ MonoBehaviour:
   cardValue: 11
   cardSprite: {fileID: 2087476722716373978, guid: fd8406e173aad5e408ac49de3a239bc5, type: 3}
   cardBack: {fileID: -1438021533542915631, guid: 758b7f0bbdb36d549adb9504ab0e2205, type: 3}
+  initialValue: 11
