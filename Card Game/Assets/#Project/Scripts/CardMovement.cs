@@ -117,12 +117,6 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
         {
             Debug.LogError("HandManager or HandPosition is NULL!");
         }
-
-        GameObject turnManager = GameObject.Find("TurnManager");
-        if (turnManager != null)
-        {
-            CustomEvent.Trigger(turnManager, "NextTurn");
-        }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
