@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e4c2fb273624850449ea09daf7660906
+guid: 69b9fa8eb04b41e4a8c5fb2fbfe91580
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1664850463812772097
-    second: TrickHighlight_0
+      213: 4171083852917753743
+    second: pokertable_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TrickHighlight_0
+      name: pokertable_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 656
-        height: 918
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 10164b31dacba1710800000000000000
-      internalID: 1664850463812772097
+      spriteID: f87c7853aaaa2e930800000000000000
+      internalID: 4171083852917753743
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TrickHighlight_0: 1664850463812772097
+      pokertable_0: 4171083852917753743
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
