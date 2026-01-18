@@ -37,4 +37,12 @@ public class CardDisplay : MonoBehaviour
             cardImage.sprite = cardData.cardSprite;
         }
     }
+
+    public void HideCard()
+    {
+        if (cardData != null && cardImage != null && cardData.cardBack != null)
+        {
+            cardImage.sprite = cardData.cardBack;
+        }
+    }
 }
