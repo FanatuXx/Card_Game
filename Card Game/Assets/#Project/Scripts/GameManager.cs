@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public OptionsManager OptionsManager { get; private set; }
     public AudioManager AudioManager { get; private set; }
     public DeckManager DeckManager { get; private set; }
+    public TarotDeckManager TarotDeckManager { get; private set; }
 
     private void Awake()
     {
@@ -31,6 +32,7 @@ public class GameManager : MonoBehaviour
         OptionsManager = GetComponentInChildren<OptionsManager>();
         AudioManager = GetComponentInChildren<AudioManager>();
         DeckManager = GetComponentInChildren<DeckManager>();
+        TarotDeckManager = GetComponentInChildren<TarotDeckManager>();
 
         if (OptionsManager == null)
         {
@@ -71,6 +73,20 @@ public class GameManager : MonoBehaviour
             {
                 Instantiate(prefab, transform.position, Quaternion.identity, transform);
                 DeckManager = GetComponentInChildren<DeckManager>();
+            }
+        }
+
+        if (TarotDeckManager == null)
+        {
+            GameObject prefab = Resources.Load<GameObject>("Prefabs/TarotDeckManager");
+            if (prefab == null)
+            {
+                Debug.LogError("TarotDeckManager prefab not found in Resources/Prefabs.");
+            }
+            else
+            {
+                Instantiate(prefab, transform.position, Quaternion.identity, transform);
+                TarotDeckManager = GetComponentInChildren<TarotDeckManager>();
             }
         }
     }
