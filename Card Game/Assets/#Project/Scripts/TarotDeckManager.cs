@@ -36,9 +36,7 @@ public class TarotDeckManager : MonoBehaviour
         // Shuffle the deck to randomize card order
         ShuffleTarotDeck();
 
-
-        // Set the tarot card (next card in deck) for the round
-        SetTarotCard();
+        InstantiateTarotDeckPileVisual();
     }
 
     // Loads all card assets from Resources folder into the deck
@@ -71,7 +69,7 @@ public class TarotDeckManager : MonoBehaviour
         Debug.Log("Deck shuffled");
     }
 
-    private void SetTarotCard()
+    public void SetTarotCard()
     {
         // Check if there are cards left in the deck
         if (tarotDeck.Count == 0)
@@ -84,7 +82,6 @@ public class TarotDeckManager : MonoBehaviour
         tarotDeck.RemoveAt(0);
 
         InstantiateTarotCardVisual(tarotCard);
-        InstantiateTarotDeckPileVisual();
     }
 
     private void InstantiateTarotCardVisual(TarotCard tarotCard)
