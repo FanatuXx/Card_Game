@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using TarotProject;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TarotDeckManager : MonoBehaviour
@@ -10,6 +11,7 @@ public class TarotDeckManager : MonoBehaviour
     public GameObject tarotCardObject;
     public GameObject tarotDeckPileObject;
     public GameObject tarotCardPrefab;
+    public GameObject tarotDeckPrefab;
     public Sprite tarotDeckBackSprite;
     public Transform tarotCardPosition;
 
@@ -103,15 +105,16 @@ public class TarotDeckManager : MonoBehaviour
 
     private void InstantiateTarotDeckPileVisual()
     {
-        if (tarotCardPrefab == null || tarotCardPosition == null || tarotDeckBackSprite == null)
+        if (tarotDeckPrefab == null || tarotCardPosition == null || tarotDeckBackSprite == null)
         {
             Debug.LogWarning("Required references not assigned for Tarot deck pile!");
             return;
         }
 
-        Vector3 tarotDeckPosition = tarotCardPosition.position + new Vector3(+150f, 0f, 0f);
+        Vector3 tarotDeckPosition = tarotCardPosition.position + new Vector3(+200f, 0f, 0f);
 
-        tarotDeckPileObject = Instantiate(tarotCardPrefab, tarotDeckPosition, Quaternion.identity, tarotCardPosition.parent);
+        tarotDeckPileObject = Instantiate(tarotDeckPrefab, tarotDeckPosition, Quaternion.identity, tarotCardPosition.parent);
+        tarotDeckPileObject.name = "TarotDeck";
 
         TarotCardDisplay tarotDeckDisplay = tarotDeckPileObject.GetComponent<TarotCardDisplay>();
         if (tarotDeckDisplay != null && tarotDeckDisplay.cardImage != null)
@@ -119,5 +122,4 @@ public class TarotDeckManager : MonoBehaviour
             tarotDeckDisplay.cardImage.sprite = tarotDeckBackSprite;
         }
     }
-   
 }
