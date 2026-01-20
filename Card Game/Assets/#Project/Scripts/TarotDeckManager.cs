@@ -95,6 +95,7 @@ public class TarotDeckManager : MonoBehaviour
         }
 
         tarotCardObject = Instantiate(tarotCardPrefab, tarotCardPosition.position, Quaternion.identity, tarotCardPosition);
+        tarotCardObject.name = "TarotCard";
 
         TarotCardDisplay tarotCardDisplay = tarotCardObject.GetComponent<TarotCardDisplay>();
         if (tarotCardDisplay != null)

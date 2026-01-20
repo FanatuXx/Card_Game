@@ -169,6 +169,7 @@ public class DeckManager : MonoBehaviour
         }
 
         trumpCardObject = Instantiate(cardPrefab, trumpCardPosition.position, Quaternion.identity, trumpCardPosition);
+        trumpCardObject.name = "TrumpCard";
 
         CardDisplay cardDisplay = trumpCardObject.GetComponent<CardDisplay>();
         if (cardDisplay != null)
@@ -194,6 +195,7 @@ public class DeckManager : MonoBehaviour
         Vector3 deckPosition = trumpCardPosition.position + new Vector3(-150f, 0f, 0f);
 
         deckPileObject = Instantiate(cardPrefab, deckPosition, Quaternion.identity, trumpCardPosition.parent);
+        deckPileObject.name = "DeckPile";
 
         CardDisplay deckDisplay = deckPileObject.GetComponent<CardDisplay>();
         if (deckDisplay != null && deckDisplay.cardImage != null)
