@@ -86,6 +86,8 @@ GameObject:
   - component: {fileID: 8493058062035615388}
   - component: {fileID: 8576775618810509289}
   - component: {fileID: 967485646106976514}
+  - component: {fileID: 396218118897421532}
+  - component: {fileID: 2967374263837342215}
   m_Layer: 5
   m_Name: TarotCardPrefab
   m_TagString: Untagged
@@ -174,6 +176,37 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: 451d393e2ae626a4c914e645f107bb82, type: 2}
   cardImage: {fileID: 7200511392285726532}
   cardBack: {fileID: 0}
+--- !u!114 &396218118897421532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229510006170261638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.VisualScripting.Core::Unity.VisualScripting.Variables
+  _data:
+    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
+    _objectReferences: []
+--- !u!114 &2967374263837342215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229510006170261638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.VisualScripting.Flow::Unity.VisualScripting.ScriptMachine
+  _data:
+    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
+    _objectReferences:
+    - {fileID: 11400000, guid: af261de06ee1a3444a21e6669ba9e43a, type: 2}
 --- !u!1 &2134141196486378500
 GameObject:
   m_ObjectHideFlags: 0
