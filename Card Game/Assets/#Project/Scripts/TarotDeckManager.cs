@@ -4,16 +4,32 @@ using UnityEngine;
 
 public class TarotDeckManager : MonoBehaviour
 {
-    /*
+
     private List<TarotCard> tarotDeck = new List<TarotCard>(); // All available cards in the deck
 
-    public GameObject trumpCardObject;
+    public GameObject tarotCardObject;
     public GameObject tarotDeckPileObject;
     public GameObject tarotCardPrefab;
     public Sprite tarotDeckBackSprite;
     public Transform tarotCardPosition;
+
     void Start()
     {
+        // Find the TarotCardPosition if not assigned
+        if (tarotCardPosition == null)
+        {
+            GameObject tarotCardPositionObject = GameObject.Find("TarotCardPosition");
+            if (tarotCardPositionObject != null)
+            {
+                tarotCardPosition = tarotCardPositionObject.transform;
+            }
+            else
+            {
+                Debug.LogError("TrumpCardPosition not found in scene!");
+                return;
+            }
+        }
+
         // Initialize the deck with all available cards
         InitializeTarotDeck();
 
@@ -81,16 +97,10 @@ public class TarotDeckManager : MonoBehaviour
 
         tarotCardObject = Instantiate(tarotCardPrefab, tarotCardPosition.position, Quaternion.identity, tarotCardPosition);
 
-        CardDisplay cardDisplay = tarotCardObject.GetComponent<CardDisplay>();
-        if (cardDisplay != null)
+        TarotCardDisplay tarotCardDisplay = tarotCardObject.GetComponent<TarotCardDisplay>();
+        if (tarotCardDisplay != null)
         {
-            cardDisplay.SetCardData(tarotCard, true);
-        }
-
-        CardMovement cardMovement = tarotCardObject.GetComponent<CardMovement>();
-        if (cardMovement != null)
-        {
-            Destroy(cardMovement);
+            tarotCardDisplay.SetTarotCardData(tarotCard, true);
         }
     }
 
@@ -102,21 +112,15 @@ public class TarotDeckManager : MonoBehaviour
             return;
         }
 
-        Vector3 tarotDeckPosition = tarotCardPosition.position + new Vector3(-150f, 0f, 0f);
+        Vector3 tarotDeckPosition = tarotCardPosition.position + new Vector3(+150f, 0f, 0f);
 
         tarotDeckPileObject = Instantiate(tarotCardPrefab, tarotDeckPosition, Quaternion.identity, tarotCardPosition.parent);
 
-        CardDisplay tarotDeckDisplay = tarotDeckPileObject.GetComponent<CardDisplay>();
-        if (tarotDeckDisplay != null && tarotDeckDisplay.tarotCardImage != null)
+        TarotCardDisplay tarotDeckDisplay = tarotDeckPileObject.GetComponent<TarotCardDisplay>();
+        if (tarotDeckDisplay != null && tarotDeckDisplay.cardImage != null)
         {
             tarotDeckDisplay.cardImage.sprite = tarotDeckBackSprite;
         }
-
-        CardMovement cardMovement = tarotDeckPileObject.GetComponent<CardMovement>();
-        if (cardMovement != null)
-        {
-            Destroy(cardMovement);
-        }
     }
-    */
+   
 }

@@ -44,3 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3262491d2dfe57741acd15eb3ca6f9af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TarotDeckManager
+  tarotCardObject: {fileID: 0}
+  tarotDeckPileObject: {fileID: 0}
+  tarotCardPrefab: {fileID: 1229510006170261638, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
+  tarotDeckBackSprite: {fileID: 6580220746971659571, guid: 5d0af9f03dfc4b74fa712ea703baa37a, type: 3}
+  tarotCardPosition: {fileID: 0}
