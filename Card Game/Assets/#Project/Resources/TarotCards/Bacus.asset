@@ -19,3 +19,4 @@ MonoBehaviour:
     You don't have a choice anyway...
   cardProverb: '"Bacus is a benevolent god; by clouding reason, he prevents the rigidity
     of logic and paves the way for rational invention. Or something like that."'
+  cardPrefab: {fileID: 254033083811750028, guid: 91fdf8c5e305d4948a1b9819206d4f60, type: 3}

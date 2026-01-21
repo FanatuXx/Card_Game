@@ -13,5 +13,6 @@ namespace TarotProject
         public Sprite cardBack;
         public string effectDescription;
         public string cardProverb;
+        public GameObject cardPrefab;
     }
 }

@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 765859431744728162, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 765859431744728162, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -7.56
+      objectReference: {fileID: 0}
     - target: {fileID: 967485646106976514, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       propertyPath: cardNameText
       value: 
@@ -28,6 +36,14 @@ PrefabInstance:
       propertyPath: m_text
       value: '"Bacus is a benevolent god; by clouding reason, he prevents the rigidity
         of logic and paves the way for rational invention. Or something like that."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1895200524151642233, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
+      propertyPath: m_fontSize
+      value: 0.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 1895200524151642233, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.38
       objectReference: {fileID: 0}
     - target: {fileID: 2134141196486378500, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       propertyPath: m_IsActive
@@ -97,6 +113,10 @@ PrefabInstance:
     - target: {fileID: 6347300302241355578, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       propertyPath: m_text
       value: Bacus
+      objectReference: {fileID: 0}
+    - target: {fileID: 7579929960284939190, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 8493058062035615388, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       propertyPath: m_Pivot.x
@@ -185,8 +205,47 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1229510006170261638, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 232937001022866994}
+    - targetCorrespondingSourceObject: {fileID: 1229510006170261638, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6287104262501625926}
   m_SourcePrefab: {fileID: 100100000, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
+--- !u!1 &254033083811750028 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1229510006170261638, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
+  m_PrefabInstance: {fileID: 1339426613097068554}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &232937001022866994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254033083811750028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.VisualScripting.Flow::Unity.VisualScripting.ScriptMachine
+  _data:
+    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
+    _objectReferences:
+    - {fileID: 11400000, guid: 915932ceb84f2f042abe92c22496ba7b, type: 2}
+--- !u!114 &6287104262501625926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254033083811750028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a010c17060e3244a69bff231d3f74d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BacusEffect
 --- !u!114 &638248622398087283 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1895200524151642233, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}

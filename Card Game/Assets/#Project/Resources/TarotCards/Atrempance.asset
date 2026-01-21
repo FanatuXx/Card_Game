@@ -18,3 +18,4 @@ MonoBehaviour:
   effectDescription: Until the end of this round, no one may play trump cards.
   cardProverb: '"Intemperance has killed more men than hunger. But still... I''m
     hungry."'
+  cardPrefab: {fileID: 2985655260398715622, guid: e1c081c27cfd172469ca694b3ca5d8f0, type: 3}

@@ -15,6 +15,7 @@ public class TarotDeckManager : MonoBehaviour
     public Sprite tarotDeckBackSprite;
     public Transform tarotCardPosition;
 
+
     void Start()
     {
         // Find the TarotCardPosition if not assigned
@@ -88,14 +89,22 @@ public class TarotDeckManager : MonoBehaviour
 
     private void InstantiateTarotCardVisual(TarotCard tarotCard)
     {
-        if (tarotCardPrefab == null || tarotCardPosition == null)
+        if (tarotCardPosition == null)
         {
-            Debug.LogWarning("Tarot card prefab or Tarot card position not assigned!");
+            Debug.LogWarning("Tarot card position not assigned!");
             return;
         }
 
-        tarotCardObject = Instantiate(tarotCardPrefab, tarotCardPosition.position, Quaternion.identity, tarotCardPosition);
-        tarotCardObject.name = "TarotCard";
+        GameObject prefabToInstantiate = tarotCard.cardPrefab != null ? tarotCard.cardPrefab : tarotCardPrefab;
+
+        if (prefabToInstantiate == null)
+        {
+            Debug.LogWarning("Tarot card prefab not assigned!");
+            return;
+        }
+
+        tarotCardObject = Instantiate(prefabToInstantiate, tarotCardPosition.position, Quaternion.identity, tarotCardPosition);
+        tarotCardObject.name = tarotCard.name;
 
         TarotCardDisplay tarotCardDisplay = tarotCardObject.GetComponent<TarotCardDisplay>();
         if (tarotCardDisplay != null)

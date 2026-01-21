@@ -10,19 +10,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 765859431744728162, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 3.520576
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 765859431744728162, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0.917556
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 765859431744728162, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.01
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 765859431744728162, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -4.6893387
+      value: -6.5
       objectReference: {fileID: 0}
     - target: {fileID: 967485646106976514, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       propertyPath: cardNameText
@@ -43,6 +43,14 @@ PrefabInstance:
     - target: {fileID: 1895200524151642233, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       propertyPath: m_text
       value: '"Intemperance has killed more men than hunger. But still... I''m hungry."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1895200524151642233, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
+      propertyPath: m_fontSize
+      value: 0.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 1895200524151642233, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.38
       objectReference: {fileID: 0}
     - target: {fileID: 2134141196486378500, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       propertyPath: m_IsActive
@@ -119,6 +127,10 @@ PrefabInstance:
     - target: {fileID: 6347300302241355578, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       propertyPath: m_fontStyle
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7579929960284939190, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 8493058062035615388, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       propertyPath: m_Pivot.x
