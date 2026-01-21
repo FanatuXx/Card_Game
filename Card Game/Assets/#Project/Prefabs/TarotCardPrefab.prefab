@@ -177,8 +177,9 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: 451d393e2ae626a4c914e645f107bb82, type: 2}
   cardImage: {fileID: 7200511392285726532}
   cardBack: {fileID: 0}
-  cardName: {fileID: 0}
-  cardDescription: {fileID: 0}
+  cardNameText: {fileID: 6347300302241355578}
+  cardProverbText: {fileID: 1895200524151642233}
+  cardDescriptionText: {fileID: 3143532238461963520}
 --- !u!114 &396218118897421532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,7 +255,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &765859431744728162
 RectTransform:
   m_ObjectHideFlags: 0
@@ -271,8 +272,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.01, y: -4.6893387}
-  m_SizeDelta: {x: 3.520576, y: 0.917556}
+  m_AnchoredPosition: {x: -0.01, y: -7.1}
+  m_SizeDelta: {x: 8, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &223369363389254659
 CanvasRenderer:
@@ -304,8 +305,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Until the end of this round, no one may play trump cards.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6d50154b051180047afc512e237863b2, type: 2}
+  m_sharedMaterial: {fileID: -2177806026152625510, guid: 6d50154b051180047afc512e237863b2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -329,15 +330,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.2
-  m_fontSizeBase: 0.2
+  m_fontSize: 0.5
+  m_fontSizeBase: 0.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -390,7 +391,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7579929960284939190
 RectTransform:
   m_ObjectHideFlags: 0
@@ -407,8 +408,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -3.79}
-  m_SizeDelta: {x: 5, y: 0.749855}
+  m_AnchoredPosition: {x: 0, y: -5.01}
+  m_SizeDelta: {x: 7, y: 1.329823}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7608983485466738589
 CanvasRenderer:
@@ -440,8 +441,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '"Intemperance has killed more men than hunger."'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6d50154b051180047afc512e237863b2, type: 2}
+  m_sharedMaterial: {fileID: -2177806026152625510, guid: 6d50154b051180047afc512e237863b2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -465,15 +466,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.15
-  m_fontSizeBase: 0.15
+  m_fontSize: 0.4
+  m_fontSizeBase: 0.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 2
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -527,7 +528,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &266992280184744683
 RectTransform:
   m_ObjectHideFlags: 0
@@ -544,8 +545,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -3.18}
-  m_SizeDelta: {x: 3, y: 1}
+  m_AnchoredPosition: {x: 0, y: -3.82}
+  m_SizeDelta: {x: 6, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3610516947377356553
 CanvasRenderer:
@@ -577,8 +578,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Atrempance
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 970d3c4b8ef5ea74096fbe5acacae045, type: 2}
-  m_sharedMaterial: {fileID: -1575253803882507764, guid: 970d3c4b8ef5ea74096fbe5acacae045, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 117fb0a9cf8740647a6e5b07f4454758, type: 2}
+  m_sharedMaterial: {fileID: 6514832963428416074, guid: 117fb0a9cf8740647a6e5b07f4454758, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -602,15 +603,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.15
-  m_fontSizeBase: 0.15
+  m_fontSize: 0.7
+  m_fontSizeBase: 0.7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0

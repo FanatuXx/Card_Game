@@ -8,9 +8,10 @@ namespace TarotProject
     [CreateAssetMenu(fileName = "New Tarot Card", menuName = "Tarot Card")]
     public class TarotCard : ScriptableObject
     {
-        public TextMeshProUGUI cardName;
+        public string cardName;
         public Sprite cardSprite;
         public Sprite cardBack;
-        public TextMeshProUGUI effectDescription;
+        public string effectDescription;
+        public string cardProverb;
     }
 }

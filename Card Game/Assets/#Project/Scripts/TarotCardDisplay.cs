@@ -4,16 +4,21 @@ using TMPro;
 using TarotProject;
 using UnityEngine.EventSystems;
 
-public class TarotCardDisplay : MonoBehaviour, IPointerEnterHandler
+public class TarotCardDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
 
     public TarotCard cardData;
     public Image cardImage;
     public Image cardBack;
-    public TextMeshProUGUI cardName;
-    public TextMeshProUGUI cardDescription;
+    public TextMeshProUGUI cardNameText;
+    public TextMeshProUGUI cardProverbText;
+    public TextMeshProUGUI cardDescriptionText;
 
 
+    void Start()
+    {
+        HideCardDetails();
+    }
     public void SetTarotCardData(TarotCard data, bool showCardFace)
     {
         cardData = data;
@@ -34,26 +39,48 @@ public class TarotCardDisplay : MonoBehaviour, IPointerEnterHandler
         }
     }
 
+    void HideCardDetails()
+    {
+        if (cardNameText != null)
+        {
+            cardNameText.gameObject.SetActive(false);
+        }
+        if (cardDescriptionText != null)
+        {
+            cardDescriptionText.gameObject.SetActive(false);
+        }
+        if (cardProverbText != null)
+        {
+            cardProverbText.gameObject.SetActive(false);
+        }
+    }
+
     public void OnPointerEnter(PointerEventData eventData)
     {
-        cardName = cardName.GetComponent<TextMeshProUGUI>();
-        cardDescription = cardDescription.GetComponent<TextMeshProUGUI>();
-
         if (cardData != null)
         {
-            cardName.enabled = true;
-            cardDescription.enabled = true;
 
             // Update the UI elements with card details
-            if (cardName != null)
+            if (cardNameText != null)
             {
-                cardName = cardData.cardName;
+                cardNameText.gameObject.SetActive(true);
+                cardNameText.text = cardData.cardName;
             }
-            if (cardDescription != null)
+            if (cardDescriptionText != null)
             {
-                cardDescription = cardData.effectDescription;
+                cardDescriptionText.gameObject.SetActive(true);
+                cardDescriptionText.text = cardData.effectDescription;
+            }
+            if (cardProverbText != null)
+            {
+                cardProverbText.gameObject.SetActive(true);
+                cardProverbText.text = cardData.cardProverb;
             }
         }
+    }
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        HideCardDetails();
     }
 
     public void RevealCard()

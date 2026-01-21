@@ -15,4 +15,7 @@ MonoBehaviour:
   cardName: Bacus
   cardSprite: {fileID: -1448698634519568991, guid: 20fbb7b4f5e714b439293f0a62023280, type: 3}
   cardBack: {fileID: 6580220746971659571, guid: 5d0af9f03dfc4b74fa712ea703baa37a, type: 3}
-  effectDescription: 
+  effectDescription: How about we shuffle all the players' cards for a bit of fun?
+    You don't have a choice anyway...
+  cardProverb: '"Bacus is a benevolent god; by clouding reason, he prevents the rigidity
+    of logic and paves the way for rational invention. Or something like that."'
