@@ -1,14 +1,18 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using TarotProject;
+using UnityEngine.EventSystems;
 
-public class TarotCardDisplay : MonoBehaviour
+public class TarotCardDisplay : MonoBehaviour, IPointerEnterHandler
 {
 
     public TarotCard cardData;
-
     public Image cardImage;
     public Image cardBack;
+    public TextMeshProUGUI cardName;
+    public TextMeshProUGUI cardDescription;
+
 
     public void SetTarotCardData(TarotCard data, bool showCardFace)
     {
@@ -26,6 +30,28 @@ public class TarotCardDisplay : MonoBehaviour
             else if (!showCardFace && cardData.cardBack != null)
             {
                 cardImage.sprite = cardData.cardBack;
+            }
+        }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        cardName = cardName.GetComponent<TextMeshProUGUI>();
+        cardDescription = cardDescription.GetComponent<TextMeshProUGUI>();
+
+        if (cardData != null)
+        {
+            cardName.enabled = true;
+            cardDescription.enabled = true;
+
+            // Update the UI elements with card details
+            if (cardName != null)
+            {
+                cardName = cardData.cardName;
+            }
+            if (cardDescription != null)
+            {
+                cardDescription = cardData.effectDescription;
             }
         }
     }
