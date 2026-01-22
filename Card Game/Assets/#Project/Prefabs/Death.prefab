@@ -197,7 +197,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1229510006170261638, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -7668854684285244519}
   m_SourcePrefab: {fileID: 100100000, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
 --- !u!114 &1494726232675903028 stripped
 MonoBehaviour:
@@ -221,6 +224,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!1 &3318691863435178930 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1229510006170261638, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
+  m_PrefabInstance: {fileID: 4548147976188029748}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-7668854684285244519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3318691863435178930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.VisualScripting.Flow::Unity.VisualScripting.ScriptMachine
+  _data:
+    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
+    _objectReferences:
+    - {fileID: 11400000, guid: 37a24f7d079455741a9a2ae60218b9fb, type: 2}
 --- !u!114 &7424297795630808078 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6347300302241355578, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}

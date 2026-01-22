@@ -5,7 +5,7 @@ using UnityEngine;
 public class DeckManager : MonoBehaviour
 {
     private const int CARDS_PER_PLAYER = 13; // Number of cards each player receives at game start
-    private List<Card> deck = new List<Card>(); // All available cards in the deck
+    public List<Card> deck = new List<Card>(); // All available cards in the deck
     private List<HandManager> playerHandManagers = new List<HandManager>(); // References to all player hand managers in the game
 
     public Card.CardType currentTrumpColor;
