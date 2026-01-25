@@ -33,6 +33,7 @@ Transform:
   - {fileID: 3498072863787944498}
   - {fileID: 6153034624903137851}
   - {fileID: 4056360711687638647}
+  - {fileID: 7087516988233519745}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7950577102499403204
@@ -99,6 +100,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4648012252446819560, guid: dc116dc2335d2384b882b8400e209932, type: 3}
+      propertyPath: cardPrefab
+      value: 
+      objectReference: {fileID: 7854932300404087528, guid: 6177a51ad06d40148b3df9d14c92ea7f, type: 3}
+    - target: {fileID: 4648012252446819560, guid: dc116dc2335d2384b882b8400e209932, type: 3}
+      propertyPath: deckBackSprite
+      value: 
+      objectReference: {fileID: -1438021533542915631, guid: 758b7f0bbdb36d549adb9504ab0e2205, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -108,6 +117,72 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4472414502542240433, guid: dc116dc2335d2384b882b8400e209932, type: 3}
   m_PrefabInstance: {fileID: 457717723635115206}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2744327674999759961
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8169283275103128295}
+    m_Modifications:
+    - target: {fileID: 4452389699725833979, guid: a6310f5b65415234b8b953d237006408, type: 3}
+      propertyPath: m_Name
+      value: TarotDeckManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921911423280805592, guid: a6310f5b65415234b8b953d237006408, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.44824
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921911423280805592, guid: a6310f5b65415234b8b953d237006408, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.64738
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921911423280805592, guid: a6310f5b65415234b8b953d237006408, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921911423280805592, guid: a6310f5b65415234b8b953d237006408, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921911423280805592, guid: a6310f5b65415234b8b953d237006408, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921911423280805592, guid: a6310f5b65415234b8b953d237006408, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921911423280805592, guid: a6310f5b65415234b8b953d237006408, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921911423280805592, guid: a6310f5b65415234b8b953d237006408, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921911423280805592, guid: a6310f5b65415234b8b953d237006408, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921911423280805592, guid: a6310f5b65415234b8b953d237006408, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6752871343469920790, guid: a6310f5b65415234b8b953d237006408, type: 3}
+      propertyPath: tarotDeckPrefab
+      value: 
+      objectReference: {fileID: 4218165001397477591, guid: dd87b5d1a81f489459be134b58e217db, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a6310f5b65415234b8b953d237006408, type: 3}
+--- !u!4 &7087516988233519745 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4921911423280805592, guid: a6310f5b65415234b8b953d237006408, type: 3}
+  m_PrefabInstance: {fileID: 2744327674999759961}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5186814669958253777
 PrefabInstance:
