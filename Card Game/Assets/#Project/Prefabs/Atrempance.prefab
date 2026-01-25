@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 266992280184744683, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -3.4799995
+      objectReference: {fileID: 0}
     - target: {fileID: 765859431744728162, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       propertyPath: m_SizeDelta.x
       value: 8
@@ -22,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 765859431744728162, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -6.5
+      value: -6.16
       objectReference: {fileID: 0}
     - target: {fileID: 967485646106976514, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       propertyPath: cardNameText
@@ -46,11 +50,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1895200524151642233, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       propertyPath: m_fontSize
-      value: 0.38
+      value: 0.42
       objectReference: {fileID: 0}
     - target: {fileID: 1895200524151642233, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       propertyPath: m_fontSizeBase
-      value: 0.38
+      value: 0.42
       objectReference: {fileID: 0}
     - target: {fileID: 2134141196486378500, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       propertyPath: m_IsActive
@@ -69,8 +73,16 @@ PrefabInstance:
       value: Until the end of this round, no one may play trump cards.
       objectReference: {fileID: 0}
     - target: {fileID: 3143532238461963520, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
+      propertyPath: m_fontSize
+      value: 0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 3143532238461963520, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       propertyPath: m_fontStyle
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3143532238461963520, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.52
       objectReference: {fileID: 0}
     - target: {fileID: 3143532238461963520, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       propertyPath: m_HorizontalAlignment
@@ -130,7 +142,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7579929960284939190, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -5
+      value: -4.66
       objectReference: {fileID: 0}
     - target: {fileID: 8493058062035615388, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       propertyPath: m_Pivot.x
