@@ -124,7 +124,7 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
         GameObject turnManager = GameObject.Find("TurnManager");
         if (turnManager != null)
         { 
-            List<GameObject> cards = Variables.Scene(SceneManager.GetSceneByBuildIndex(0)).Get<List<GameObject>>("playedCardsThisRound");
+            List<GameObject> cards = Variables.Scene(SceneManager.GetSceneByBuildIndex(1)).Get<List<GameObject>>("playedCardsThisRound");
 
             if(cards.Count == 3)
             {
