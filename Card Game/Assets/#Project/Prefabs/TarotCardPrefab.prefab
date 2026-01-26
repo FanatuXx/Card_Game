@@ -305,8 +305,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Until the end of this round, no one may play trump cards.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6d50154b051180047afc512e237863b2, type: 2}
-  m_sharedMaterial: {fileID: -2177806026152625510, guid: 6d50154b051180047afc512e237863b2, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 015c0429fd5bc614ca92018035019cd5, type: 2}
+  m_sharedMaterial: {fileID: -4529764207281494284, guid: 015c0429fd5bc614ca92018035019cd5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -441,8 +441,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '"Intemperance has killed more men than hunger."'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6d50154b051180047afc512e237863b2, type: 2}
-  m_sharedMaterial: {fileID: -2177806026152625510, guid: 6d50154b051180047afc512e237863b2, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 015c0429fd5bc614ca92018035019cd5, type: 2}
+  m_sharedMaterial: {fileID: -4529764207281494284, guid: 015c0429fd5bc614ca92018035019cd5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
