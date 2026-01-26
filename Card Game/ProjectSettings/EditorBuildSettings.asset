@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: c7145a1a95e712345bb2367be9a2aae1
+  - enabled: 1
     path: Assets/Scenes/TwhistGame.unity
     guid: 9c97ad2995ef8944ab06f97cd6005c7c
   m_configObjects:
