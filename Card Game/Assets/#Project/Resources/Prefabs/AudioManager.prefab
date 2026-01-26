@@ -165,6 +165,7 @@ MonoBehaviour:
       UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Atrempance","value":{"$content":9,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.AudioClip,
       UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"UICard","value":{"$content":10,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.AudioClip,
       UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Discard","value":{"$content":11,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.AudioClip,
+      UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Shuffle","value":{"$content":12,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.AudioClip,
       UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 8300000, guid: e23d2cbc04b11b14389d565ecd293835, type: 3}
@@ -179,6 +180,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: eed5149cb40009645a8258ea609bd86b, type: 3}
     - {fileID: 8300000, guid: 46067a44267acfa469b80b178c22c8fe, type: 3}
     - {fileID: 8300000, guid: dbb0057537b0e924494c935aeebb2107, type: 3}
+    - {fileID: 8300000, guid: a6dd908b39cb3124e8ca6e6a3039ed60, type: 3}
 --- !u!114 &-3502278713049105255
 MonoBehaviour:
   m_ObjectHideFlags: 0

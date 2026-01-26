@@ -224,6 +224,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1229510006170261638, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6287104262501625926}
+    - targetCorrespondingSourceObject: {fileID: 1229510006170261638, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8236868182922844608}
   m_SourcePrefab: {fileID: 100100000, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
 --- !u!1 &254033083811750028 stripped
 GameObject:
@@ -258,6 +261,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1a010c17060e3244a69bff231d3f74d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BacusEffect
+--- !u!114 &8236868182922844608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254033083811750028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.VisualScripting.Flow::Unity.VisualScripting.ScriptMachine
+  _data:
+    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
+    _objectReferences:
+    - {fileID: 11400000, guid: f8c5e69eb4afbd94983a9110acfec86b, type: 2}
 --- !u!114 &638248622398087283 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1895200524151642233, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
