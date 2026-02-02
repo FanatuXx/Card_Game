@@ -21,8 +21,8 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
     [SerializeField] private Vector3 playPosition;
     [SerializeField] private GameObject glowEffect;
     [SerializeField] private float lerpFactor = 0.1f;
-    [SerializeField] private float cardPlayDivider = 4f;
-    [SerializeField] private float cardPlayMultiplier = 1f;
+    [SerializeField] private float cardPlayDivider = 1.5f;
+    [SerializeField] private float cardPlayMultiplier = 10f;
     [SerializeField] private bool needUpdateCardPlayPosition = false;
     [SerializeField] private float playPositionYDivider = 2f;
     [SerializeField] private float playPositionYMultiplier = 1f;
@@ -118,23 +118,6 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
         {
             Debug.LogError("HandManager or HandPosition is NULL!");
         }
-
-        /* GameObject turnManager = GameObject.Find("TurnManager");
-        if (turnManager != null)
-        { 
-            List<GameObject> cards = Variables.Scene(SceneManager.GetSceneByBuildIndex(1)).Get<List<GameObject>>("playedCardsThisRound");
-
-            if(cards.Count == 3)
-            {
-                CustomEvent.Trigger(turnManager, "PlayerNextTrick");
-            }
-            else
-            {
-                CustomEvent.Trigger(turnManager, "NextTurn");
-            }
-        }
-        */
-
     }
 
     public void OnPointerEnter(PointerEventData eventData)
