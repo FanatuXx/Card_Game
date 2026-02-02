@@ -119,7 +119,7 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
             Debug.LogError("HandManager or HandPosition is NULL!");
         }
 
-        GameObject turnManager = GameObject.Find("TurnManager");
+        /* GameObject turnManager = GameObject.Find("TurnManager");
         if (turnManager != null)
         { 
             List<GameObject> cards = Variables.Scene(SceneManager.GetSceneByBuildIndex(1)).Get<List<GameObject>>("playedCardsThisRound");
@@ -133,6 +133,7 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
                 CustomEvent.Trigger(turnManager, "NextTurn");
             }
         }
+        */
 
     }
 
