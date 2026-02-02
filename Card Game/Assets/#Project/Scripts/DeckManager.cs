@@ -1,6 +1,8 @@
+using System.Collections;
 using System.Collections.Generic;
 using TarotProject;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DeckManager : MonoBehaviour
 {
@@ -14,7 +16,42 @@ public class DeckManager : MonoBehaviour
     public GameObject cardPrefab;
     public Sprite deckBackSprite;
     public Transform trumpCardPosition;
+
+    private bool isInitialized = false;
+
     void Start()
+    {
+        if (!isInitialized)
+        {
+            InitializeDeckManager();
+        }
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "TwhistGame" && isInitialized)
+        {
+            StartCoroutine(ResetDeckManagerCoroutine());
+        }
+    }
+
+    private IEnumerator ResetDeckManagerCoroutine()
+    {
+        yield return null;
+        ResetDeckManager();
+    }
+
+    private void InitializeDeckManager()
     {
         // Initialize the deck with all available cards
         InitializeDeck();
@@ -30,6 +67,26 @@ public class DeckManager : MonoBehaviour
 
         // Set the trump card (next card in deck) for the round
         SetTrumpCard();
+
+        isInitialized = true;
+    }
+
+    private void ResetDeckManager()
+    {
+        deck.Clear();
+        playerHandManagers.Clear();
+
+        if (trumpCardObject != null)
+        {
+            Destroy(trumpCardObject);
+        }
+        if (deckPileObject != null)
+        {
+            Destroy(deckPileObject);
+        }
+
+        isInitialized = false;
+        InitializeDeckManager();
     }
 
     // Loads all card assets from Resources folder into the deck

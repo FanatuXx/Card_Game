@@ -1,7 +1,8 @@
+using System.Collections;
 using System.Collections.Generic;
 using TarotProject;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TarotDeckManager : MonoBehaviour
 {
@@ -15,8 +16,42 @@ public class TarotDeckManager : MonoBehaviour
     public Sprite tarotDeckBackSprite;
     public Transform tarotCardPosition;
 
+    private bool isInitialized = false;
+
 
     void Start()
+    {
+        if (!isInitialized)
+        {
+            InitializeTarotDeckManager();
+        }
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "TwhistGame" && isInitialized)
+        {
+            StartCoroutine(ResetTarotDeckManagerCoroutine());
+        }
+    }
+
+    private IEnumerator ResetTarotDeckManagerCoroutine()
+    {
+        yield return null;
+        ResetTarotDeckManager();
+    }
+
+    private void InitializeTarotDeckManager()
     {
         // Find the TarotCardPosition if not assigned
         if (tarotCardPosition == null)
@@ -28,7 +63,7 @@ public class TarotDeckManager : MonoBehaviour
             }
             else
             {
-                Debug.LogError("TrumpCardPosition not found in scene!");
+                Debug.LogError("TarotCardPosition not found in scene!");
                 return;
             }
         }
@@ -40,6 +75,27 @@ public class TarotDeckManager : MonoBehaviour
         ShuffleTarotDeck();
 
         InstantiateTarotDeckPileVisual();
+
+        isInitialized = true;
+    }
+
+    private void ResetTarotDeckManager()
+    {
+        // Clear existing state
+        tarotDeck.Clear();
+
+        // Destroy existing tarot card and tarotdeck pile visuals
+        if (tarotCardObject != null)
+        {
+            Destroy(tarotCardObject);
+        }
+        if (tarotDeckPileObject != null)
+        {
+            Destroy(tarotDeckPileObject);
+        }
+
+        isInitialized = false;
+        InitializeTarotDeckManager();
     }
 
     // Loads all card assets from Resources folder into the deck
@@ -133,3 +189,4 @@ public class TarotDeckManager : MonoBehaviour
         }
     }
 }
+
