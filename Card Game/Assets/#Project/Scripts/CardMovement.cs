@@ -20,7 +20,6 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
     [SerializeField] private Vector2 cardPlay;
     [SerializeField] private Vector3 playPosition;
     [SerializeField] private GameObject glowEffect;
-    [SerializeField] private GameObject playArrow;
     [SerializeField] private float lerpFactor = 0.1f;
     [SerializeField] private float cardPlayDivider = 4f;
     [SerializeField] private float cardPlayMultiplier = 1f;
@@ -94,7 +93,6 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
         rectTransform.localRotation = originalRotation;
         rectTransform.localPosition = originalPosition;
         glowEffect.SetActive(false);
-        playArrow.SetActive(false);
 
         if (wasPlaying)
         {
@@ -173,7 +171,6 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
             if (Input.mousePosition.y > cardPlay.y)
             {
                 currentState = 3;
-                playArrow.SetActive(true);
                 rectTransform.localPosition = Vector3.Lerp(rectTransform.position, playPosition, lerpFactor);
             }
         }
@@ -199,7 +196,6 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
         if (Input.mousePosition.y < cardPlay.y)
         {
             currentState = 2;
-            playArrow.SetActive(false);
         }
     }
 
