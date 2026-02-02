@@ -372,7 +372,7 @@ MonoBehaviour:
   playPosition: {x: -600, y: 500, z: 0}
   glowEffect: {fileID: 6613514421824799761}
   lerpFactor: 0.1
-  cardPlayDivider: 4
+  cardPlayDivider: 4.5
   cardPlayMultiplier: 1
   needUpdateCardPlayPosition: 1
   playPositionYDivider: 1
