@@ -15,6 +15,6 @@ MonoBehaviour:
   cardName: King of Clubs
   cardType: 00000000
   cardValue: 13
-  cardSprite: {fileID: 8365082249225311916, guid: 36ef02730f4306a4f996a934e0951021, type: 3}
-  cardBack: {fileID: -1438021533542915631, guid: 758b7f0bbdb36d549adb9504ab0e2205, type: 3}
+  cardSprite: {fileID: -4821530343430527414, guid: e5d32f3ad344cec43a77c0a75b7661f5, type: 3}
+  cardBack: {fileID: -7718090379587915712, guid: 88c6c1b86f9640748a79ba10ac42c4bd, type: 3}
   initialValue: 13

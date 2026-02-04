@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TarotProject.Card
   cardName: 4 of Hearts
   cardType: 02000000
-  cardValue: 4
-  cardSprite: {fileID: 6412624488069510536, guid: c675dd085ac04084f955fcc3e8433cbf, type: 3}
-  cardBack: {fileID: -1438021533542915631, guid: 758b7f0bbdb36d549adb9504ab0e2205, type: 3}
+  cardValue: 17
+  cardSprite: {fileID: -4178046375966092550, guid: 4cac2e407eae8804d8e9f948d1231449, type: 3}
+  cardBack: {fileID: -7718090379587915712, guid: 88c6c1b86f9640748a79ba10ac42c4bd, type: 3}
   initialValue: 4

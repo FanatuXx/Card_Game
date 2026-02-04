@@ -15,6 +15,6 @@ MonoBehaviour:
   cardName: Jack of Diamonds
   cardType: 03000000
   cardValue: 11
-  cardSprite: {fileID: 2966120415379253702, guid: e75739ce77f18bf41a25e2421d146d4b, type: 3}
-  cardBack: {fileID: -1438021533542915631, guid: 758b7f0bbdb36d549adb9504ab0e2205, type: 3}
+  cardSprite: {fileID: -7735982824379041461, guid: eb906a51ec17c9444a224dcb6395f3a8, type: 3}
+  cardBack: {fileID: -7718090379587915712, guid: 88c6c1b86f9640748a79ba10ac42c4bd, type: 3}
   initialValue: 11

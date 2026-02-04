@@ -15,6 +15,6 @@ MonoBehaviour:
   cardName: 2 of Clubs
   cardType: 00000000
   cardValue: 2
-  cardSprite: {fileID: 3783169320521910952, guid: c6c8fd02619dc074592aa0108884e639, type: 3}
-  cardBack: {fileID: -1438021533542915631, guid: 758b7f0bbdb36d549adb9504ab0e2205, type: 3}
+  cardSprite: {fileID: 6937817954938267909, guid: bc16f4aadff13b24e9a1fe6753fd4454, type: 3}
+  cardBack: {fileID: -7718090379587915712, guid: 88c6c1b86f9640748a79ba10ac42c4bd, type: 3}
   initialValue: 2

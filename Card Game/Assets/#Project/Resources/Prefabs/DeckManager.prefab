@@ -44,7 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c57ce9dbb8383743ae3612444b9c524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DeckManager
-  allCards: []
-  startingHandSize: 6
-  maxHandSize: 12
-  currentHandSize: 0
+  deck: []
+  currentTrumpColor: 0
+  trumpCardObject: {fileID: 0}
+  deckPileObject: {fileID: 0}
+  cardPrefab: {fileID: 0}
+  deckBackSprite: {fileID: -7718090379587915712, guid: 88c6c1b86f9640748a79ba10ac42c4bd, type: 3}
+  trumpCardPosition: {fileID: 0}

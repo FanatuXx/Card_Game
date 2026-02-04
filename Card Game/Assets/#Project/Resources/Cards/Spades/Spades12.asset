@@ -15,6 +15,6 @@ MonoBehaviour:
   cardName: Queen of Spades
   cardType: 01000000
   cardValue: 12
-  cardSprite: {fileID: 7423857372119259060, guid: c2b3fd45874fb35439c909f7d474107d, type: 3}
-  cardBack: {fileID: -1438021533542915631, guid: 758b7f0bbdb36d549adb9504ab0e2205, type: 3}
+  cardSprite: {fileID: 7519753400087680208, guid: 731495365856e2e4ab75189115ea531c, type: 3}
+  cardBack: {fileID: -7718090379587915712, guid: 88c6c1b86f9640748a79ba10ac42c4bd, type: 3}
   initialValue: 12

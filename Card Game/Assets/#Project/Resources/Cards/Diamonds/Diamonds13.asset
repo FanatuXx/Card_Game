@@ -15,6 +15,6 @@ MonoBehaviour:
   cardName: King of Diamonds
   cardType: 03000000
   cardValue: 13
-  cardSprite: {fileID: 2100891349826192237, guid: d8dfad4aff7866e418acf8befcb5ffd0, type: 3}
-  cardBack: {fileID: -1438021533542915631, guid: 758b7f0bbdb36d549adb9504ab0e2205, type: 3}
+  cardSprite: {fileID: -4821530343430527414, guid: 013253be8fee05f4fbc6ad7736be26dc, type: 3}
+  cardBack: {fileID: -7718090379587915712, guid: 88c6c1b86f9640748a79ba10ac42c4bd, type: 3}
   initialValue: 13

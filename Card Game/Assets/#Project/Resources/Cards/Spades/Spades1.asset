@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TarotProject.Card
   cardName: As of Spades
   cardType: 01000000
-  cardValue: 14
-  cardSprite: {fileID: -5498659744019066566, guid: 8865c2dc140177c4c8a9c66a35a972d5, type: 3}
-  cardBack: {fileID: -1438021533542915631, guid: 758b7f0bbdb36d549adb9504ab0e2205, type: 3}
+  cardValue: 27
+  cardSprite: {fileID: 7582643865833442955, guid: 6274dc1a4242a8c44b153a49807171c3, type: 3}
+  cardBack: {fileID: -7718090379587915712, guid: 88c6c1b86f9640748a79ba10ac42c4bd, type: 3}
   initialValue: 14

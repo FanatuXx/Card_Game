@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TarotProject.Card
   cardName: 10 of Clubs
   cardType: 00000000
-  cardValue: 10
-  cardSprite: {fileID: 2517570485410783222, guid: dcca5380450f6d94b81886317d48210e, type: 3}
-  cardBack: {fileID: -1438021533542915631, guid: 758b7f0bbdb36d549adb9504ab0e2205, type: 3}
+  cardValue: 23
+  cardSprite: {fileID: -5099292496197868168, guid: aa0c9a342bc62c849926f98a6fd23bec, type: 3}
+  cardBack: {fileID: -7718090379587915712, guid: 88c6c1b86f9640748a79ba10ac42c4bd, type: 3}
   initialValue: 10

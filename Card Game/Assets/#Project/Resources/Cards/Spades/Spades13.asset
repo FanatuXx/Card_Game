@@ -15,6 +15,6 @@ MonoBehaviour:
   cardName: King of Spades
   cardType: 01000000
   cardValue: 13
-  cardSprite: {fileID: -431265726642068221, guid: 2ed7b8d0e1865d748b9e0e2891f170a5, type: 3}
-  cardBack: {fileID: -1438021533542915631, guid: 758b7f0bbdb36d549adb9504ab0e2205, type: 3}
+  cardSprite: {fileID: -4821530343430527414, guid: 63491f5637c3919479fc3a4aec9bcab8, type: 3}
+  cardBack: {fileID: -7718090379587915712, guid: 88c6c1b86f9640748a79ba10ac42c4bd, type: 3}
   initialValue: 13

@@ -15,6 +15,6 @@ MonoBehaviour:
   cardName: Queen of Diamonds
   cardType: 03000000
   cardValue: 12
-  cardSprite: {fileID: -7298341867934554027, guid: e41a26caa9dec2a4abf380f3418cb4d0, type: 3}
-  cardBack: {fileID: -1438021533542915631, guid: 758b7f0bbdb36d549adb9504ab0e2205, type: 3}
+  cardSprite: {fileID: 7519753400087680208, guid: 97d386d2ac5fa1140bfb15582cc70faa, type: 3}
+  cardBack: {fileID: -7718090379587915712, guid: 88c6c1b86f9640748a79ba10ac42c4bd, type: 3}
   initialValue: 12

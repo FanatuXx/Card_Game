@@ -15,6 +15,6 @@ MonoBehaviour:
   cardName: 8 of Hearts
   cardType: 02000000
   cardValue: 8
-  cardSprite: {fileID: 476911994884363630, guid: 4de8ac3f3edf7dd4ebdd80ce21a44538, type: 3}
-  cardBack: {fileID: -1438021533542915631, guid: 758b7f0bbdb36d549adb9504ab0e2205, type: 3}
+  cardSprite: {fileID: 8288426215254106694, guid: 2de2a13c5a89b484cb004126f3111418, type: 3}
+  cardBack: {fileID: -7718090379587915712, guid: 88c6c1b86f9640748a79ba10ac42c4bd, type: 3}
   initialValue: 8

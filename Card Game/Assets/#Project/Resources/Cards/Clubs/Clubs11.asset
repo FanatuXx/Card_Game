@@ -15,6 +15,6 @@ MonoBehaviour:
   cardName: Jack of Clubs
   cardType: 00000000
   cardValue: 11
-  cardSprite: {fileID: 3699209466524322564, guid: 7e7fd38cc0f585348a163a3fd8e9e9cd, type: 3}
-  cardBack: {fileID: -1438021533542915631, guid: 758b7f0bbdb36d549adb9504ab0e2205, type: 3}
+  cardSprite: {fileID: -7735982824379041461, guid: 4834dfb09e45e7e46a37a59dbb54f125, type: 3}
+  cardBack: {fileID: -7718090379587915712, guid: 88c6c1b86f9640748a79ba10ac42c4bd, type: 3}
   initialValue: 11

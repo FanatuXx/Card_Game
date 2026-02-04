@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TarotProject.TarotCard
   cardName: Atrempance
   cardSprite: {fileID: 8578658208554760242, guid: fcd2abf7d0ded2e46a56671ab7702e41, type: 3}
-  cardBack: {fileID: 6580220746971659571, guid: 5d0af9f03dfc4b74fa712ea703baa37a, type: 3}
+  cardBack: {fileID: -4232700998746518746, guid: f7096d3d05a3e5a4ab581ad02f6b148b, type: 3}
   effectDescription: Until the end of this round, no one may play trump cards.
   cardProverb: '"Intemperance has killed more men than hunger. But still... I''m
     hungry."'

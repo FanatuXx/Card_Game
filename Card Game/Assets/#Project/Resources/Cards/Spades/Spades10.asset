@@ -15,6 +15,6 @@ MonoBehaviour:
   cardName: 10 of Spades
   cardType: 01000000
   cardValue: 10
-  cardSprite: {fileID: 3937407040690299881, guid: bd8b4a8eb8fa100488bc70bd4210308f, type: 3}
-  cardBack: {fileID: -1438021533542915631, guid: 758b7f0bbdb36d549adb9504ab0e2205, type: 3}
+  cardSprite: {fileID: -5099292496197868168, guid: 1645f5ee4e2b376478b4c17bda065e04, type: 3}
+  cardBack: {fileID: -7718090379587915712, guid: 88c6c1b86f9640748a79ba10ac42c4bd, type: 3}
   initialValue: 10

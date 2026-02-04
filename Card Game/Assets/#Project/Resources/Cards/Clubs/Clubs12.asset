@@ -15,6 +15,6 @@ MonoBehaviour:
   cardName: Queen of Clubs
   cardType: 00000000
   cardValue: 12
-  cardSprite: {fileID: 2546708646141091889, guid: d134562ca37241f429950e47a41df047, type: 3}
-  cardBack: {fileID: -1438021533542915631, guid: 758b7f0bbdb36d549adb9504ab0e2205, type: 3}
+  cardSprite: {fileID: 7519753400087680208, guid: 7823ca40cc844314280ec79ed6dfbcb6, type: 3}
+  cardBack: {fileID: -7718090379587915712, guid: 88c6c1b86f9640748a79ba10ac42c4bd, type: 3}
   initialValue: 12

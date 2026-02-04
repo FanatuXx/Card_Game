@@ -15,6 +15,6 @@ MonoBehaviour:
   cardName: 5 of Diamonds
   cardType: 03000000
   cardValue: 5
-  cardSprite: {fileID: 3586831959988974154, guid: 7a15140a68182fe4d8821a1474632e4c, type: 3}
-  cardBack: {fileID: -1438021533542915631, guid: 758b7f0bbdb36d549adb9504ab0e2205, type: 3}
+  cardSprite: {fileID: 4130640169021434097, guid: 382aec160179fc4428a4b8fe680941d6, type: 3}
+  cardBack: {fileID: -7718090379587915712, guid: 88c6c1b86f9640748a79ba10ac42c4bd, type: 3}
   initialValue: 5

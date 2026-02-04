@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TarotProject.TarotCard
   cardName: Death
   cardSprite: {fileID: -6332474485369982100, guid: 069b37047b9b34d44a52bd27a7861089, type: 3}
-  cardBack: {fileID: 6580220746971659571, guid: 5d0af9f03dfc4b74fa712ea703baa37a, type: 3}
+  cardBack: {fileID: -4232700998746518746, guid: f7096d3d05a3e5a4ab581ad02f6b148b, type: 3}
   effectDescription: Destroys a random card in each player's hand, then deals one
     from the deck.
   cardProverb: '"The happiest life ends before death. I hope yours is over because

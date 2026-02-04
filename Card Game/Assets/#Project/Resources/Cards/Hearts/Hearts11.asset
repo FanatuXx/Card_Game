@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TarotProject.Card
   cardName: Jack of Hearts
   cardType: 02000000
-  cardValue: 11
-  cardSprite: {fileID: -7272930264268907403, guid: 43f4b0d3e88fbb74cb0bb7a19c64432b, type: 3}
-  cardBack: {fileID: -1438021533542915631, guid: 758b7f0bbdb36d549adb9504ab0e2205, type: 3}
+  cardValue: 24
+  cardSprite: {fileID: -7735982824379041461, guid: dc4c1d889dcead0418661430bcb77949, type: 3}
+  cardBack: {fileID: -7718090379587915712, guid: 88c6c1b86f9640748a79ba10ac42c4bd, type: 3}
   initialValue: 11

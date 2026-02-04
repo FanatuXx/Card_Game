@@ -15,6 +15,6 @@ MonoBehaviour:
   cardName: Jack of Spades
   cardType: 01000000
   cardValue: 11
-  cardSprite: {fileID: 2087476722716373978, guid: fd8406e173aad5e408ac49de3a239bc5, type: 3}
-  cardBack: {fileID: -1438021533542915631, guid: 758b7f0bbdb36d549adb9504ab0e2205, type: 3}
+  cardSprite: {fileID: -7735982824379041461, guid: 27f1ff2d3d390ad4899291f1887117f4, type: 3}
+  cardBack: {fileID: -7718090379587915712, guid: 88c6c1b86f9640748a79ba10ac42c4bd, type: 3}
   initialValue: 11
