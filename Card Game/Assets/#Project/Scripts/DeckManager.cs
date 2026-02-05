@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TarotProject;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class DeckManager : MonoBehaviour
 {
@@ -187,6 +188,8 @@ public class DeckManager : MonoBehaviour
                 deckIndex++;
             }
         }
+
+        CustomEvent.Trigger(GameObject.Find("TurnManager"), "SortByBoth");
 
         Debug.Log($"Dealt {CARDS_PER_PLAYER} cards to {playerHandManagers.Count} players");
 
