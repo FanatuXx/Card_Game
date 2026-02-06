@@ -189,7 +189,7 @@ public class DeckManager : MonoBehaviour
             }
         }
 
-        CustomEvent.Trigger(GameObject.Find("TurnManager"), "SortByBoth");
+        //CustomEvent.Trigger(GameObject.Find("TurnManager"), "SortByBoth");
 
         Debug.Log($"Dealt {CARDS_PER_PLAYER} cards to {playerHandManagers.Count} players");
 

@@ -265,8 +265,8 @@ GameObject:
   - component: {fileID: 6463342646074249546}
   - component: {fileID: 218063957248271632}
   - component: {fileID: 3755417202875087089}
-  - component: {fileID: -2270030913489305228}
-  - component: {fileID: -7473821960845005263}
+  - component: {fileID: -4348847595944495848}
+  - component: {fileID: 4517615717009762302}
   m_Layer: 0
   m_Name: CardPrefab
   m_TagString: Untagged
@@ -368,7 +368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CardMovement
   selectScale: 1.1
-  cardPlay: {x: 0, y: 300}
+  cardPlay: {x: 0, y: 0}
   playPosition: {x: -600, y: 500, z: 0}
   glowEffect: {fileID: 6613514421824799761}
   lerpFactor: 0.1
@@ -381,7 +381,7 @@ MonoBehaviour:
   playPositionXMultiplier: 1
   needUpdatePlayPosition: 0
   ownerHandManager: {fileID: 0}
---- !u!114 &-2270030913489305228
+--- !u!114 &-4348847595944495848
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -396,7 +396,7 @@ MonoBehaviour:
   _data:
     _json: '{"declarations":{"Kind":"Object","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
---- !u!114 &-7473821960845005263
+--- !u!114 &4517615717009762302
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
