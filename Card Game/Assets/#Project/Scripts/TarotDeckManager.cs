@@ -177,7 +177,7 @@ public class TarotDeckManager : MonoBehaviour
             return;
         }
 
-        Vector3 tarotDeckPosition = tarotCardPosition.position + new Vector3(+200f, 0f, 0f);
+        Vector3 tarotDeckPosition = tarotCardPosition.position + new Vector3(+175f, 0f, 0f);
 
         tarotDeckPileObject = Instantiate(tarotDeckPrefab, tarotDeckPosition, Quaternion.identity, tarotCardPosition.parent);
         tarotDeckPileObject.name = "TarotDeck";

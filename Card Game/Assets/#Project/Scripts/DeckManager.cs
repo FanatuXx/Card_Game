@@ -252,7 +252,7 @@ public class DeckManager : MonoBehaviour
             return;
         }
 
-        Vector3 deckPosition = trumpCardPosition.position + new Vector3(-150f, 0f, 0f);
+        Vector3 deckPosition = trumpCardPosition.position + new Vector3(-175f, 0f, 0f);
 
         deckPileObject = Instantiate(cardPrefab, deckPosition, Quaternion.identity, trumpCardPosition.parent);
         deckPileObject.name = "DeckPile";

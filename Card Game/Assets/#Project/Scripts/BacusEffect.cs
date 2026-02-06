@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TarotProject;
 using UnityEngine;
+using Unity.VisualScripting;
 
 public class BacusEffect : MonoBehaviour
 {
@@ -99,6 +100,8 @@ public class BacusEffect : MonoBehaviour
                 cardIndex++;
             }
         }
+
+        CustomEvent.Trigger(GameObject.Find("TurnManager"), "SortByBoth");
     }
 
     public void ExecuteBacusEffect()
