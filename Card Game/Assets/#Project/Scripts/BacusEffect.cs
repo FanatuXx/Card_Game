@@ -102,6 +102,8 @@ public class BacusEffect : MonoBehaviour
         }
 
         CustomEvent.Trigger(GameObject.Find("TurnManager"), "SortByBoth");
+        handManagers[1].UpdateHandVisuals();
+        handManagers[2].UpdateHandVisuals();
     }
 
     public void ExecuteBacusEffect()

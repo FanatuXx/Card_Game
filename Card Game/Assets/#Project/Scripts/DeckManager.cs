@@ -186,10 +186,18 @@ public class DeckManager : MonoBehaviour
 
                 // Move to next card in deck
                 deckIndex++;
+
+                if (playerIndex == 0)
+                {
+                    CustomEvent.Trigger(GameObject.Find("TurnManager"), "SortByBoth");
+                }
+
+                else
+                {
+                    playerHandManagers[playerIndex].UpdateHandVisuals();
+                }
             }
         }
-
-        //CustomEvent.Trigger(GameObject.Find("TurnManager"), "SortByBoth");
 
         Debug.Log($"Dealt {CARDS_PER_PLAYER} cards to {playerHandManagers.Count} players");
 

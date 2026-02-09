@@ -39,7 +39,7 @@ public class HandManager : MonoBehaviour
             cardMovement.ownerHandManager = this;
         }
 
-        UpdateHandVisuals();
+        //UpdateHandVisuals();
     }
 
     public void UpdateHandVisuals()
