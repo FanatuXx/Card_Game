@@ -1,12 +1,8 @@
-using NUnit.Framework;
-using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
-public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
+public class CardMovement : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
 {
     private RectTransform rectTransform;
     private Canvas canvas;
@@ -17,18 +13,7 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
     private Vector3 originalPosition;
 
     [SerializeField] private float selectScale = 1.1f;
-    [SerializeField] private Vector2 cardPlay;
-    [SerializeField] private Vector3 playPosition;
     [SerializeField] private GameObject glowEffect;
-    [SerializeField] private float lerpFactor = 0.1f;
-    [SerializeField] private float cardPlayDivider = 1.5f;
-    [SerializeField] private float cardPlayMultiplier = 10f;
-    [SerializeField] private bool needUpdateCardPlayPosition = false;
-    [SerializeField] private float playPositionYDivider = 2f;
-    [SerializeField] private float playPositionYMultiplier = 1f;
-    [SerializeField] private float playPositionXDivider = 2f;
-    [SerializeField] private float playPositionXMultiplier = 1f;
-    [SerializeField] private bool needUpdatePlayPosition = false;
 
     [HideInInspector] public HandManager ownerHandManager;
 
@@ -45,22 +30,10 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
         originalScale = rectTransform.localScale;
         originalPosition = rectTransform.localPosition;
         originalRotation = rectTransform.localRotation;
-
-        UpdateCardPlayPostion();
-        UpdatePlayPostion();
     }
 
     void Update()
     {
-        if (needUpdateCardPlayPosition)
-        {
-            UpdateCardPlayPostion();
-        }
-
-        if (needUpdatePlayPosition)
-        {
-            UpdatePlayPostion();
-        }
 
         switch (currentState)
         {
@@ -68,14 +41,6 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
                 HandleHoverState();
                 break;
             case 2:
-                HandleDragState();
-                if (!Input.GetMouseButton(0))
-                {
-                    TransitionToState0();
-                }
-                break;
-            case 3:
-                HandlePlayState();
                 if (!Input.GetMouseButton(0))
                 {
                     TransitionToState0();
@@ -86,7 +51,7 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
 
     private void TransitionToState0()
     {
-        bool wasPlaying = (currentState == 3);
+        bool wasPlaying = (currentState == 2);
 
         currentState = 0;
         rectTransform.localScale = originalScale;
@@ -148,61 +113,10 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
         }
     }
 
-    public void OnDrag(PointerEventData eventData)
-    {
-        if (currentState == 2)
-        {
-            if (Input.mousePosition.y > cardPlay.y)
-            {
-                currentState = 3;
-                rectTransform.localPosition = Vector3.Lerp(rectTransform.position, playPosition, lerpFactor);
-            }
-        }
-    }
-
     private void HandleHoverState()
     {
         glowEffect.SetActive(true);
         rectTransform.localScale = originalScale * selectScale;
-    }
-
-    private void HandleDragState()
-    {
-        rectTransform.localRotation = Quaternion.identity;
-        rectTransform.position = Vector3.Lerp(rectTransform.position, Input.mousePosition, lerpFactor);
-    }
-
-    private void HandlePlayState()
-    {
-        rectTransform.localPosition = playPosition;
-        rectTransform.localRotation = Quaternion.identity;
-
-        if (Input.mousePosition.y < cardPlay.y)
-        {
-            currentState = 2;
-        }
-    }
-
-    private void UpdateCardPlayPostion()
-    {
-        if (cardPlayDivider != 0 && canvasRectTransform != null)
-        {
-            float segment = cardPlayMultiplier / cardPlayDivider;
-
-            cardPlay.y = canvasRectTransform.rect.height * segment;
-        }
-    }
-
-    private void UpdatePlayPostion()
-    {
-        if (canvasRectTransform != null && playPositionYDivider != 0 && playPositionXDivider != 0)
-        {
-            float segmentX = (playPositionXMultiplier / playPositionXDivider) - 0.5f;
-            float segmentY = (playPositionYMultiplier / playPositionYDivider) - 0.5f;
-
-            playPosition.x = canvasRectTransform.rect.width * segmentX;
-            playPosition.y = canvasRectTransform.rect.height * segmentY;
-        }
     }
 }
 
