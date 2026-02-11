@@ -10,24 +10,28 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 266992280184744683, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -3.4799995
+      value: 2.024
       objectReference: {fileID: 0}
     - target: {fileID: 765859431744728162, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 8
+      value: 8.4611
       objectReference: {fileID: 0}
     - target: {fileID: 765859431744728162, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 2
+      value: 2.65568
       objectReference: {fileID: 0}
     - target: {fileID: 765859431744728162, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -0.0056636
       objectReference: {fileID: 0}
     - target: {fileID: 765859431744728162, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -6.16
+      value: -1.1612604
       objectReference: {fileID: 0}
+    - target: {fileID: 967485646106976514, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
+      propertyPath: backgroundUI
+      value: 
+      objectReference: {fileID: 9099934618449071099}
     - target: {fileID: 967485646106976514, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       propertyPath: cardNameText
       value: 
@@ -140,9 +144,13 @@ PrefabInstance:
       propertyPath: m_fontStyle
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7520144955940601033, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7579929960284939190, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -4.66
+      value: 0.84400004
       objectReference: {fileID: 0}
     - target: {fileID: 8493058062035615388, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
       propertyPath: m_Pivot.x
@@ -290,3 +298,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &9099934618449071099 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5059305038122930587, guid: 55cce3e05d3d24a4ab999396e8410d9b, type: 3}
+  m_PrefabInstance: {fileID: 4071031352383150688}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image

@@ -10,6 +10,7 @@ public class TarotCardDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExi
     public TarotCard cardData;
     public Image cardImage;
     public Image cardBack;
+    public Image backgroundUI;
     public TextMeshProUGUI cardNameText;
     public TextMeshProUGUI cardProverbText;
     public TextMeshProUGUI cardDescriptionText;
@@ -41,6 +42,10 @@ public class TarotCardDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     void HideCardDetails()
     {
+        if (backgroundUI != null)
+        {
+            backgroundUI.gameObject.SetActive(false);
+        }
         if (cardNameText != null)
         {
             cardNameText.gameObject.SetActive(false);
@@ -61,6 +66,10 @@ public class TarotCardDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExi
         {
 
             // Update the UI elements with card details
+            if (backgroundUI != null)
+            {
+                backgroundUI.gameObject.SetActive(true);
+            }
             if (cardNameText != null)
             {
                 cardNameText.gameObject.SetActive(true);
