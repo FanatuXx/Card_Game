@@ -199,7 +199,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!224 &17780751
 RectTransform:
@@ -2543,7 +2543,7 @@ MonoBehaviour:
   _data:
     _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
     _objectReferences:
-    - {fileID: 11400000, guid: de2314ef06151a44e9724af3ce1bbbca, type: 2}
+    - {fileID: 11400000, guid: d0956ae0b98d92440bbee3ba98c36d63, type: 2}
 --- !u!114 &416187203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2866,7 +2866,7 @@ MonoBehaviour:
   _data:
     _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
     _objectReferences:
-    - {fileID: 11400000, guid: de2314ef06151a44e9724af3ce1bbbca, type: 2}
+    - {fileID: 11400000, guid: d0956ae0b98d92440bbee3ba98c36d63, type: 2}
 --- !u!114 &494287138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3938,7 +3938,10 @@ MonoBehaviour:
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"yMoveDistance","value":{"x":0.0,"y":25.0,"z":0.0,"$type":"UnityEngine.Vector3"},"typeHandle":{"Identification":"UnityEngine.Vector3,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"HeartPosition","value":{"$content":1,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"ColorsToNumbers","value":{"$content":[{"Key":{"$content":"Hearts","$type":"TarotProject.Card+CardType"},"Value":{"$content":1,"$type":"System.Int32"}},{"Key":{"$content":"Spades","$type":"TarotProject.Card+CardType"},"Value":{"$content":2,"$type":"System.Int32"}},{"Key":{"$content":"Diamonds","$type":"TarotProject.Card+CardType"},"Value":{"$content":3,"$type":"System.Int32"}},{"Key":{"$content":"Clubs","$type":"TarotProject.Card+CardType"},"Value":{"$content":4,"$type":"System.Int32"}}],"$type":"Unity.VisualScripting.AotDictionary"},"typeHandle":{"Identification":"Unity.VisualScripting.AotDictionary,
-      Unity.VisualScripting.Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      Unity.VisualScripting.Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"basicRules","value":null,"typeHandle":{"Identification":"UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"howToWin","value":null,"typeHandle":{"Identification":"UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"cardsAndTricks","value":null,"typeHandle":{"Identification":"UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 619718727}
     - {fileID: 1482069213}
@@ -5745,7 +5748,7 @@ MonoBehaviour:
   _data:
     _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
     _objectReferences:
-    - {fileID: 11400000, guid: de2314ef06151a44e9724af3ce1bbbca, type: 2}
+    - {fileID: 11400000, guid: d0956ae0b98d92440bbee3ba98c36d63, type: 2}
 --- !u!114 &1333685938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5795,8 +5798,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.VisualScripting.Flow::Unity.VisualScripting.ScriptMachine
   _data:
-    _json: '{"nest":{"source":"Macro","macro":null,"embed":null}}'
-    _objectReferences: []
+    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
+    _objectReferences:
+    - {fileID: 11400000, guid: d602b9547c5a25540ba10ac878953ee6, type: 2}
 --- !u!114 &1334927996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7253,7 +7257,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1668029709
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7889,7 +7893,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1900905338
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8414,7 +8418,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2082581069
 RectTransform:
   m_ObjectHideFlags: 0
